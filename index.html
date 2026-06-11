@@ -355,6 +355,43 @@
   .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+  /* ── BY AUTHOR ── */
+  .by-author {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 16px; margin-top: 16px;
+  }
+
+  /* ── CONTACT SECTION ── */
+  .contact-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 4px; padding: 36px; margin-top: 48px;
+    display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap;
+  }
+  .contact-avatar {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent3));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: #000;
+    flex-shrink: 0;
+  }
+  .contact-info { flex: 1; }
+  .contact-name { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .contact-role { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
+  .contact-bio { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
+  .contact-details { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+  .contact-detail { font-size: 13px; color: var(--muted); }
+  .contact-detail strong { color: var(--text); font-weight: 600; }
+  .contact-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent), var(--accent3));
+    color: #000; padding: 12px 28px; border-radius: 4px;
+    font-family: 'Bebas Neue', sans-serif; font-size: 13px;
+    letter-spacing: 2px; text-transform: uppercase; font-weight: 600;
+    cursor: pointer; border: none; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .contact-button:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,212,170,0.3); }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     #hero { padding: 100px 24px 60px; }
@@ -390,6 +427,7 @@
   <h1 class="hero-title">
     SOFA<span class="word-score">SCORE</span><br>TEARDOWN
   </h1>
+  <p class="by-author">By Prateek</p>
   <p class="hero-subtitle">
     From a live scores scraper to the world's most data-dense sports app.
     How a Zagreb startup turned real-time stats into a 25M-user habit machine.
@@ -873,16 +911,19 @@
     </div>
   </div>
 
-  <div class="author-card">
-    <div class="author-avatar">PM</div>
-    <div class="author-info">
-      <div class="author-name">Product Teardown Analysis</div>
-      <div class="author-role">Elite PM · UX Research · Business Strategy · June 2026</div>
-      <div class="author-bio">
-        This teardown applies the Hook Model, Jobs-to-be-Done framework, and competitive positioning analysis to SofaScore's product. 
-        The analysis draws on SofaScore's public CPO interviews, Adjust case study data, app store reviews, and direct product usage. 
-        <strong>Every claim about why a design decision was made is backed by observable product behavior, stated company strategy, or established UX principles.</strong>
+  <div class="contact-card">
+    <div class="contact-avatar">P</div>
+    <div class="contact-info">
+      <div class="contact-name">Prateek</div>
+      <div class="contact-role">Problem Solver | Operations Enthusiast | Aspiring PM</div>
+      <div class="contact-bio">
+        Product strategy analyst exploring how world-class products drive user behavior and business value. This teardown applies frameworks like the Hook Model, Jobs-to-be-Done, and competitive positioning to deeply understand SofaScore's growth engine.
       </div>
+      <div class="contact-details">
+        <div class="contact-detail"><strong>Email:</strong> Prateeklnmi@gmail.com</div>
+        <div class="contact-detail"><strong>Phone:</strong> 7488009480</div>
+      </div>
+      <button class="contact-button" onclick="window.location.href='mailto:Prateeklnmi@gmail.com?subject=Let\'s%20Connect'">Get in Touch</button>
     </div>
   </div>
 </section>
